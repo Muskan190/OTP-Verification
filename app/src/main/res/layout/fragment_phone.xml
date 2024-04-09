@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verification.PhoneFragment"
+    android:padding="15dp"
+    >
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/cancel"
+        />
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/mobilenum"
+        android:textSize="@dimen/textsize"
+        style="@style/mystyle" />
+    <TextView
+        android:id="@+id/tx"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobile"
+        android:layout_alignLeft="@id/mobile"
+        android:layout_alignRight="@id/mobile"
+        android:maxLines="2"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="You will receive a 6 digit code to verify next."
+        android:textSize="12sp" />
+    <RelativeLayout
+        android:id="@+id/lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/spinnerg"
+        android:padding="8dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/india"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 - "
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                />
+            <EditText
+                android:id="@+id/mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:background="@null"
+                android:textSize="16sp"
+                android:hint="Mobile number"
+                android:textColor="@color/black"
+                android:inputType="phone"
+                android:layout_marginLeft="5dp"
+                android:textColorHint="@color/black"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ctnbtn"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/lo"
+        android:layout_marginTop="30dp"
+        android:text="Continue"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:backgroundTint="#2E3B62"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
